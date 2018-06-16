@@ -15,10 +15,16 @@ app.use((req, res) => {
   const pathname = url.parse(req.url).pathname;
   // console.log(req)
   fs.exists(pathname, err => {
-    if (err) res.send(404);
+    if (err) {
+      res.send(404);
+      return;
+    }
 
     fs.readFile('./mock' + pathname + '.json', (err, data) => {
-      if (err) res.send(404);
+      if (err) {
+        res.send(404);
+        return;
+      }
 
       const mockData = Mock.mock(JSON.parse(data));
       res.send(mockData);
