@@ -9,6 +9,12 @@ const url = require('url');
 
 const app = express();
 const port = 8080;
+const delay = 500;  // 响应时间
+
+// 中间件，延时响应
+app.use((req, res, next) => {
+  setTimeout(() => next(), delay);
+});
 
 app.use((req, res) => {
   // console.log(path.resolve('.' + req.url + '.json'));
