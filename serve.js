@@ -8,7 +8,7 @@ const fs = require('fs');
 const url = require('url');
 
 const app = express();
-const port = 8080;
+const port = 8070;
 const delay = 500;  // 响应时间
 
 // 中间件，延时响应

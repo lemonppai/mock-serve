@@ -20,5 +20,5 @@ yarn-error.log*
 *.sln
 
 # no commit mock
-# /mock
-# !/mock/api
+/mock
+!/mock/api
