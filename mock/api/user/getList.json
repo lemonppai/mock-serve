@@ -6,7 +6,8 @@
         "id": "@id",
         "date": "@date",
         "name": "@cname",
-        "address": "@city"
+        "address": "@city",
+        "enable": "@boolean"
       }
     ],
     "total": 50
