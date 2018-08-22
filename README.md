@@ -1,13 +1,22 @@
 # mock-serve
+动态生成mock数据
 
-服务器mock，在`mock`目录下创建接口文件，文件路径就是接口的路径，例如在`mock`创建user/getList.json，那么接口`http://localhost:8070/user/getList`，不区分请求类型，`get`,`post`即可。
+## 项目运行
 
-## Build Setup
-
+### 安装依赖包
 ``` bash
-# install dependencies
 npm install
-
-# serve with hot reload at localhost:8080
-npm run serve
+# 或
+yarn install
 ```
+
+### 启动项目
+```bash
+npm run serve
+# 或
+yarn run serve
+```
+项目运行在`http://localhost:8070`
+
+## 创建接口文件
+在`mock`目录下创建接口文件，所在文件路径是接口的路径，例如我在`mock`的文件夹创建`user/getList.json`，接口为`/user/getList`。不区分`get`,`post`请求。
