@@ -4,7 +4,7 @@
     "serve": "node serve.js"
   },
   "dependencies": {
-    "chalk": "^2.3.2",
+    "chalk": "^2.4.1",
     "express": "^4.16.3",
     "mockjs": "^1.0.1-beta3"
   }
