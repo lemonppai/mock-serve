@@ -26,7 +26,7 @@ app.use((req, res) => {
       return;
     }
 
-    fs.readFile('./mock' + pathname + '.json', (err, data) => {
+    fs.readFile('./mock' + pathname, (err, data) => {
       if (err) {
         res.send(404);
         return;
@@ -41,5 +41,5 @@ app.use((req, res) => {
 // 监听port端口
 app.listen(port, '0.0.0.0', (err) => {
   if (err) throw err;
-  console.log(`> Listening at ` + chalk.blue(`http://localhost:${port}`));
+  console.log(`> Listening at ` + chalk.bold.blue(`http://localhost:${port}`));
 });
