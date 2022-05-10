@@ -17,24 +17,17 @@ app.use((req, res, next) => {
 });
 
 app.use((req, res) => {
-  // console.log(path.resolve('.' + req.url + '.json'));
   const pathname = url.parse(req.url).pathname;
+  // console.log(pathname)
   // console.log(req)
-  fs.exists(pathname, err => {
+  fs.readFile('./mock' + pathname, (err, data) => {
     if (err) {
       res.send(404);
       return;
     }
 
-    fs.readFile('./mock' + pathname, (err, data) => {
-      if (err) {
-        res.send(404);
-        return;
-      }
-
-      const mockData = Mock.mock(JSON.parse(data));
-      res.send(mockData);
-    })
+    const mockData = Mock.mock(JSON.parse(data));
+    res.send(mockData);
   });
 });
 
